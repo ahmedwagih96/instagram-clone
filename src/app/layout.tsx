@@ -1,10 +1,6 @@
 import Header from "@/components/Header";
 import "./globals.css";
-
-export const metadata = {
-  title: "Instagram Clone",
-  description: "A clone of the famous social media app instagram",
-};
+import Stories from "@/components/Stories/Stories";
 
 export default function RootLayout({
   children,
@@ -13,9 +9,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-gray-50 min-h-full">
         {/* HEADER */}
         <Header />
+        {/* STORIES */}
+        <Stories />
         {children}
       </body>
     </html>
