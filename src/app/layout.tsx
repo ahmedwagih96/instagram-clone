@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import "./globals.css";
-import Stories from "@/components/Stories/Stories";
+import Stories from "@/components/Stories";
 
 export default function RootLayout({
   children,
