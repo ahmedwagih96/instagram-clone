@@ -1,6 +1,5 @@
 import Header from "@/components/Header";
 import "./globals.css";
-import Stories from "@/components/Stories";
 
 export default function RootLayout({
   children,
@@ -12,8 +11,6 @@ export default function RootLayout({
       <body className="bg-gray-50 min-h-full">
         {/* HEADER */}
         <Header />
-        {/* STORIES */}
-        <Stories />
         {children}
       </body>
     </html>
