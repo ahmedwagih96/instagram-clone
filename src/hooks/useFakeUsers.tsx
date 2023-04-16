@@ -2,19 +2,20 @@
 import { useEffect, useState } from "react";
 import minifaker from "minifaker";
 import "minifaker/locales/en";
-import { StoryType } from "@/typings";
+import { FakeUsersType } from "@/typings";
 
-function useStoryUsers() {
-  const [storyUsers, setStoryUsers] = useState<StoryType[]>([]);
+function useStoryUsers(numberOfStories: number) {
+  const [fakeUsers, setFakeUsers] = useState<FakeUsersType[]>([]);
   useEffect(() => {
-    const fakeUsers = minifaker.array(20, (i) => ({
+    const users = minifaker.array(numberOfStories, (i) => ({
       username: minifaker.username({ locale: "en" }).toLowerCase(),
       img: `https://i.pravatar.cc/150?img=${Math.ceil(Math.random() * 70)}`,
+      jobTitle: minifaker.jobTitle(),
       id: i,
     }));
-    setStoryUsers(fakeUsers);
+    setFakeUsers(users);
   }, []);
-  return storyUsers;
+  return fakeUsers;
 }
 
 export default useStoryUsers;

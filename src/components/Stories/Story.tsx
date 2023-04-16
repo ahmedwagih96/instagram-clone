@@ -1,7 +1,7 @@
-import { StoryType } from "@/typings";
+import { FakeUsersType } from "@/typings";
 
 type Props = {
-  story: StoryType;
+  story: FakeUsersType;
 };
 
 function Story({ story }: Props) {

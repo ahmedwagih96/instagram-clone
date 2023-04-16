@@ -1,6 +1,7 @@
-export type StoryType = {
+export type FakeUsersType = {
   username: string;
   img: string;
+  jobTitle: string;
   id: number;
 };
 
